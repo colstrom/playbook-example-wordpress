@@ -1,0 +1,12 @@
+---
+- connection: local
+  hosts: localhost
+  roles:
+    - role: telusdigital.nginx
+      nginx_php_enabled: yes
+    - role: telusdigital.php
+      php_modules:
+        - php5-curl
+        - php5-gd
+        - php5-mcrypt
+        - php5-mysql
